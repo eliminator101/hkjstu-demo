@@ -1,12 +1,12 @@
 :root {
-  --black: #050505;
-  --ink: #11100f;
-  --ivory: #f1eee6;
-  --paper: #d8d4ca;
-  --muted: #aaa79f;
-  --signal: #ff3b12;
-  --line-dark: rgba(241, 238, 230, 0.22);
-  --line-light: rgba(5, 5, 5, 0.2);
+  --black: #000;
+  --ink: #000;
+  --ivory: #fff;
+  --paper: #d8d8d8;
+  --muted: #aaa;
+  --signal: #fff;
+  --line-dark: rgba(255, 255, 255, 0.22);
+  --line-light: rgba(0, 0, 0, 0.2);
   --font-display: 'Archivo', 'Arial Narrow', Arial, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
   --page-pad: clamp(1.25rem, 2.8vw, 3.25rem);
@@ -49,8 +49,8 @@ body.menu-open {
 }
 
 ::selection {
-  background: var(--signal);
-  color: var(--black);
+  background: #000;
+  color: #fff;
 }
 
 h1,
@@ -157,7 +157,7 @@ body.is-loading {
 .signature-pen {
   fill: var(--signal);
   opacity: 0;
-  filter: drop-shadow(0 0 5px rgba(255, 59, 18, 0.65));
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.65));
 }
 
 .loader-caption,
@@ -186,11 +186,13 @@ body.is-loading {
 }
 
 .light-section {
+  --signal: #000;
   background: var(--ivory);
   color: var(--ink);
 }
 
 .dark-section {
+  --signal: #fff;
   background: var(--black);
   color: var(--ivory);
 }
@@ -328,6 +330,7 @@ body.is-loading {
   transform: translate(-100px, -100px);
   border: 1px solid var(--signal);
   border-radius: 50%;
+  mix-blend-mode: difference;
   opacity: 0;
   pointer-events: none;
   place-items: center;
@@ -813,7 +816,7 @@ body.is-loading {
   padding: clamp(0.8rem, 1.2vw, 1.35rem);
   border: 1px solid var(--ink);
   background: var(--ivory);
-  box-shadow: 10px 12px 0 rgba(5, 5, 5, 0.08);
+  box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.08);
   font-family: var(--font-mono);
 }
 
@@ -930,6 +933,7 @@ body.is-loading {
 
 .risk-card {
   --rotate: 5deg;
+  --signal: #000;
   top: 18%;
   right: 9%;
   width: 21%;
@@ -964,7 +968,7 @@ body.is-loading {
 
 .risk-line {
   height: 3px;
-  background: rgba(5, 5, 5, 0.15);
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .risk-line i {
@@ -1008,8 +1012,8 @@ body.is-loading {
   left: 8%;
   width: 57%;
   border: 1px solid var(--ink);
-  background: #faf8f1;
-  box-shadow: 18px 20px 0 rgba(5, 5, 5, 0.08);
+  background: #fff;
+  box-shadow: 18px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
 .browser-bar {
@@ -1055,7 +1059,7 @@ body.is-loading {
   margin-top: 1rem;
   padding: 1.5rem;
   background: var(--signal);
-  color: var(--black);
+  color: var(--ivory);
 }
 
 .browser-hero span {
@@ -1109,6 +1113,7 @@ body.is-loading {
 
 .web-sticker {
   --rotate: 9deg;
+  --signal: #fff;
   right: 12%;
   bottom: 16%;
   padding: 1rem 1.4rem;
@@ -1125,6 +1130,7 @@ body.is-loading {
 /* Mock Circle */
 .mock-paper {
   --rotate: 6deg;
+  --signal: #000;
   top: 15%;
   left: 37%;
   width: 26%;
@@ -1141,7 +1147,7 @@ body.is-loading {
   --rotate: -8deg;
   top: 20%;
   left: 32%;
-  background: #bdbab2;
+  background: #bdbdbd;
   box-shadow: none;
 }
 
@@ -1174,7 +1180,7 @@ body.is-loading {
   grid-column: 2;
   display: block;
   height: 1px;
-  background: rgba(5, 5, 5, 0.25);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .mock-paper > small {
@@ -1302,7 +1308,7 @@ body.is-loading {
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--signal);
-  box-shadow: 0 0 0 6px rgba(255, 59, 18, 0.12);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.12);
 }
 
 .application-status div {
@@ -1317,7 +1323,7 @@ body.is-loading {
 }
 
 .application-status div > span {
-  color: #66625b;
+  color: #666;
   font-size: 0.58rem;
 }
 
@@ -1362,7 +1368,7 @@ body.is-loading {
 
 .benefit-list li span {
   padding-top: 0.25rem;
-  color: #66625b;
+  color: #666;
   font: 0.6rem var(--font-mono);
 }
 
@@ -1525,7 +1531,7 @@ body.is-loading {
 .team-list p {
   align-self: center;
   max-width: 20ch;
-  color: #66625b;
+  color: #666;
   font: 0.61rem/1.5 var(--font-mono);
   text-align: right;
 }
